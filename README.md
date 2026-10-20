@@ -57,3 +57,18 @@ The `Exploratory Data Analysis` matrix utilizes a non-3D flat presentation layou
 1. **Histogram (Revenue Skewness Audit):** Confirms a strong **Right-Skewed Distribution** profile. It visually maps that high-frequency retail transactions aggregate under \$1,500, with a thin corporate tail pulling the average upward.
 2. **Box-and-Whisker Plot (Outlier Fingerprint):** Confirms the central densed data box and highlights the 8 elite enterprise orders as distinct statistical coordinates outside the outer whisker.
 3. **Monthly Revenue Line Chart (Macro Growth Timeline):** Evaluates temporal sales behavior, mapping macro revenue peaks, season adjustments, and stability lines across the entire transactional timeline.
+
+---
+
+## 💾 Project 3: Production SQL Relational Data Architecture
+* **Dataset Name:** ECommerce_Data
+* **Core SQL Extraction Pipelines:**
+  * **Task 01 | Multi-Criteria Channel Funneling:** Implemented declarative filtering combining explicit equalities (`OrderStatus = 'Shipped'` and `PaymentMethod = 'Credit Card'`) to isolate active financial streams.
+  * **Task 02 | Categorical Bucket Aggregations:** Hardcoded the standard relational engine optimization logic using `GROUP BY` and multi-level scalar metrics (`COUNT`, `SUM`, `ROUND`) to compress raw rows into clean product business intelligence.
+  * **Task 03 | Relational Outlier Validation:** Injected the calculated Project 2 IQR threshold boundary (`TotalPrice > 3330.41`) inside the database pipeline. Successfully extracted the exact **8 high-value corporate enterprise transactions**, validating 100% data consistency across our analytical framework.
+
+### ⚙️ Engine Execution Logic & Architecture
+All scripts in the standalone `.sql` repository fully account for the internal compilation structure of standard relational databases, respecting the execution loop: 
+`FROM ➡️ WHERE ➡️ GROUP BY ➡️ HAVING ➡️ SELECT ➡️ ORDER BY`
+
+This setup proactively mitigates compile-time bugs like the **"Alias Trap Vulnerability"** (where a select-layer variable is accidentally requested during a step-2 conditional row-filtering process), presenting a robust enterprise-ready query portfolio.
