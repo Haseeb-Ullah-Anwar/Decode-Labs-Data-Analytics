@@ -40,3 +40,23 @@ Go
 SELECT OrderID, CustomerID, Product, Quantity, TotalPrice
 FROM ECommerce_Data
 WHERE TotalPrice > 3330.41;
+Go
+    
+SELECT CouponCode, 
+       COUNT(OrderID) AS Campaign_Usage_Frequency,
+       ROUND(SUM(TotalPrice), 2) AS Campaign_Gross_Yield
+FROM ECommerce_Data
+WHERE CouponCode IS NOT NULL AND CouponCode <> 'NO_COUPON'
+GROUP BY CouponCode
+HAVING SUM(TotalPrice) > 20000.00
+ORDER BY Campaign_Gross_Yield DESC;
+Go
+
+SELECT ReferralSource, 
+       COUNT(OrderID) AS Total_Acquisitions,
+       ROUND(SUM(TotalPrice), 2) AS Channel_Revenue_Contribution
+FROM ECommerce_Data
+WHERE ReferralSource IS NOT NULL AND ReferralSource <> ''
+GROUP BY ReferralSource
+ORDER BY Channel_Revenue_Contribution DESC;
+Go
