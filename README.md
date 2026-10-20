@@ -66,6 +66,9 @@ The `Exploratory Data Analysis` matrix utilizes a non-3D flat presentation layou
   * **Task 01 | Multi-Criteria Channel Funneling:** Implemented declarative filtering combining explicit equalities (`OrderStatus = 'Shipped'` and `PaymentMethod = 'Credit Card'`) to isolate active financial streams.
   * **Task 02 | Categorical Bucket Aggregations:** Hardcoded the standard relational engine optimization logic using `GROUP BY` and multi-level scalar metrics (`COUNT`, `SUM`, `ROUND`) to compress raw rows into clean product business intelligence.
   * **Task 03 | Relational Outlier Validation:** Injected the calculated Project 2 IQR threshold boundary (`TotalPrice > 3330.41`) inside the database pipeline. Successfully extracted the exact **8 high-value corporate enterprise transactions**, validating 100% data consistency across our analytical framework.
+  * **Task 04 | Promotional Bucket Filtration (HAVING Mechanism):** Combined `GROUP BY` categorical partitioning with a trailing `HAVING SUM(TotalPrice) > 20000.00` constraint validation layer to isolate top-performing promotional campaigns (`FREESHIP`, `SAVE10`, `WINTER15`).
+  * **Task 05 | Macro Referral Performance Metrics:** Implemented an user acquisition traffic audit to group and rank incoming digital platform traffic, identifying `Instagram` as the primary top-line revenue contributor (\$275,285.45).
+
 
 ### ⚙️ Engine Execution Logic & Architecture
 All scripts in the standalone `.sql` repository fully account for the internal compilation structure of standard relational databases, respecting the execution loop: 
